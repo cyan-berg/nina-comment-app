@@ -2,6 +2,7 @@ module.exports = {
   root: true,
   env: {
     node: true,
+    jest: true,
   },
   extends: ['plugin:vue/essential', 'eslint:recommended', 'plugin:prettier/recommended'],
   parserOptions: {
@@ -13,7 +14,7 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['**/__tests__/*.{j,t}s?(x)', '**/src/**/*.spec.{j,t}s?(x)'],
+      files: ['**/src/**/*.spec.{j,t}s?(x)'],
       env: {
         jest: true,
       },
