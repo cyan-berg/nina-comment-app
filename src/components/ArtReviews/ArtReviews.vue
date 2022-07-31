@@ -14,7 +14,7 @@
       </span>
     </div>
     <textarea
-    data-testid="review-input"
+      data-testid="review-input"
       v-model="currentReview"
       class="reviews mt-2"
       placeholder="What feelings does this art invoke?"
