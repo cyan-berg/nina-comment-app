@@ -2,7 +2,9 @@
   <div id="app" class="is-flex is-justify-content-center">
     <div class="is-flex is-flex-direction-column is-justify-content-center is-align-items-center">
       <ArtTitle title="I Stink Therefore I am" class="mb-4" />
-      <img alt="Vue logo" src="./assets/stinkthereforeiam.jpg" class="art-image" />
+      <div class="art-image-container">
+        <img alt="Vue logo" src="./assets/stinkthereforeiam.jpg" class="art-image" />
+      </div>
       <ArtReviews />
     </div>
   </div>
@@ -23,6 +25,13 @@ export default {
 
 <style lang="sass" scoped>
 .art-image
-  max-width: 200px
-  max-height: 200px
+  max-width: 100%
+  max-height: 100%
+
+.art-image-container
+  max-width: 300px
+  height: 200px
+  display: flex
+  justify-content: center
+  align-items: center
 </style>
