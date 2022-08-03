@@ -1,15 +1,14 @@
 <template>
   <div id="" class="">
-    <h1 class="is-size-1 has-text-centered">Title</h1>
     <div class="image-box">
-      <img src="@/assets/stinkthereforeiam.jpg" alt="Title" />
+      <img src="@/assets/patient-dummy.png" alt="Title" />
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "ArtDisplay",
+  name: "PatientDummy",
   components: {},
 };
 </script>

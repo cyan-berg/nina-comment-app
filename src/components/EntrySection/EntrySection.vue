@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 class="is-size-1 has-text-centered">Reviews</h1>
+    <h1 class="is-size-1 has-text-centered">Entry</h1>
     <div class="comment-box">
       Here is a comment. Here is a comment. Here is a comment.
     </div>
@@ -9,7 +9,7 @@
 
 <script>
 export default {
-  name: "CommentSection",
+  name: "EntrySection",
   components: {},
 };
 </script>
