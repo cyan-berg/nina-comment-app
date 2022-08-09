@@ -3,16 +3,18 @@ import EntrySection from "./EntrySection.vue";
 
 describe("EntrySection.vue", () => {
   it("accepts user input", async () => {
-    const { findByTestId, findByText, getByRole } = render(EntrySection);
-    const textArea = findByTestId("textarea");
-    await fireEvent.update(
+    const { findByTestId, findByText, debug } = render(EntrySection);
+    const textArea = await findByTestId("textarea");
+    fireEvent.update(
       textArea,
       "It feels like an electric eel bit a chunk out of it."
     );
-    const submitButton = getByRole("button", { name: "Submit" });
+    expect(textArea.value).toBe(
+      "It feels like an electric eel bit a chunk out of it."
+    );
+    const submitButton = await findByTestId("submitbutton");
     await fireEvent.click(submitButton);
-    expect(
-      await findByText("It feels like an electric eel bit a chunk out of it.")
-    ).toBeVisible();
+    await findByText("It feels like an electric eel bit a chunk out of it.");
+    debug();
   });
 });

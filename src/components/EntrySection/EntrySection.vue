@@ -2,7 +2,9 @@
   <div>
     <h1 class="is-size-1 has-text-centered">Entry</h1>
     <textarea class="new-entry" v-model="newEntryText" data-testid="textarea" />
-    <button class="m-2" @click="submit">Submit</button>
+    <button class="m-2" @click="submit" data-testid="submitbutton">
+      Submit
+    </button>
     <ul>
       <li class="entries" v-for="entry in entries" :key="entry.id">
         {{ entry.text }}
