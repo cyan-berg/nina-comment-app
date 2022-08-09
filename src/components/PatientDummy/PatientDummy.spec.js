@@ -7,6 +7,5 @@ describe("PatientDummy.vue", () => {
     queryByAltText("human body");
     const img = getByRole("img");
     expect(img.src).toEqual("http://localhost/@/assets/patient-dummy.png");
-    console.log(img.src);
   });
 });
