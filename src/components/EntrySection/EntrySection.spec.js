@@ -3,7 +3,7 @@ import EntrySection from "./EntrySection.vue";
 
 describe("EntrySection.vue", () => {
   it("accepts user input", async () => {
-    const { findByTestId, findByText, debug } = render(EntrySection);
+    const { findByTestId, getByText } = render(EntrySection);
     const textArea = await findByTestId("textarea");
     fireEvent.update(
       textArea,
@@ -14,7 +14,6 @@ describe("EntrySection.vue", () => {
     );
     const submitButton = await findByTestId("submitbutton");
     await fireEvent.click(submitButton);
-    await findByText("It feels like an electric eel bit a chunk out of it.");
-    debug();
+    getByText("It feels like an electric eel bit a chunk out of it.");
   });
 });
